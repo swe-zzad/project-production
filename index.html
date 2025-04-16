@@ -1,10 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hospital Booking System</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+    }
+
+    header {
+      background-color: #0077b6;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 1.8em;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      padding: 12px;
+      background-color: #00b4d8;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0096c7;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <header>
+    Hospital Booking System
+  </header>
+
+  <div class="container">
+    <h2>Book an Appointment</h2>
+    <form>
+      <div>
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required />
+      </div>
+
+      <div>
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required />
+      </div>
+
+      <div>
+        <label for="time">Preferred Time:</label>
+        <input type="time" id="time" name="time" required />
+      </div>
+
+      <div>
+        <label for="department">Department:</label>
+        <select id="department" name="department" required>
+          <option value="">Select Department</option>
+          <option value="general">General Medicine</option>
+          <option value="cardiology">Cardiology</option>
+          <option value="orthopedics">Orthopedics</option>
+          <option value="pediatrics">Pediatrics</option>
+          <option value="dermatology">Dermatology</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="notes">Additional Notes:</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="Enter any specific concerns..."></textarea>
+      </div>
+
+      <button type="submit">Book Appointment</button>
+    </form>
+  </div>
+
 </body>
 </html>
